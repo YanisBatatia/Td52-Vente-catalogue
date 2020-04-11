@@ -15,10 +15,7 @@ public class LignePanier {
         this.article = article;
         this.quantite = quantite;
     }
-    
-    
-    
-    
+
     private Article article;
 
     /**

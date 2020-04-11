@@ -9,6 +9,8 @@ import fr.ipst.vente.actions.Action1Catalogue;
 import fr.ipst.vente.actions.Action2Detail;
 import fr.ipst.vente.actions.Action3AjoutPanier;
 import fr.ipst.vente.actions.Action4GetPanier;
+import fr.ipst.vente.actions.Action5ChangerQty;
+import fr.ipst.vente.actions.Action6SuprPanier;
 import fr.ipst.vente.entities.Article;
 import fr.ipst.vente.entities.Panier;
 import fr.ipst.vente.vues.VueCatalogue;
@@ -56,30 +58,47 @@ public class ControleurVente extends HttpServlet {
                     vue.afficher(out, articles);
 
                 }
+                break;
                 case "2":{
                     Action2Detail action2 = new Action2Detail();
                     Article article = action2.execute(request.getParameter("id"));
                     VueDetails vue = new VueDetails();
                     vue.afficher(out, article);
-                } 
+                }
+                break;
                 case "3":{ 
-                    String ref = request.getParameter("id");
+                    String ref = request.getParameter("ref");
                     int qty = Integer.parseInt(request.getParameter("qty"));
-                    
                     Action3AjoutPanier action3 = new Action3AjoutPanier();
-                    Panier panier = action3.execute(ref, qty, session);
-                    
+                    Panier panier = action3.execute(ref, qty, session); 
                     VuePanier vue = new VuePanier();
                     vue.afficher(out, panier);
-                } 
+                }
+                break;
                 case "4":{
                     Action4GetPanier action4 = new Action4GetPanier();
                     Panier panier = action4.getpanier(session);
                     VuePanier vue = new VuePanier();
                     vue.afficher(out, panier);
                 } 
+                break;
+                case "5":{ 
+                    String ref = request.getParameter("ref");
+                    int qty = Integer.parseInt(request.getParameter("qty"));
+                    Action5ChangerQty action5 = new Action5ChangerQty();
+                    Panier panier = action5.execute(qty,ref,session); 
+                    VuePanier vue = new VuePanier();
+                    vue.afficher(out, panier);
+                } 
+                break;
+                case "6":{ 
+                    String ref = request.getParameter("ref");
+                    Action6SuprPanier action6 = new Action6SuprPanier();
+                    Panier panier = action6.execute(ref,session); 
+                    VuePanier vue = new VuePanier();
+                    vue.afficher(out, panier);
+                }
             }
-
         }
     }
 

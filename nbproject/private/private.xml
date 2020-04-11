@@ -3,12 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/dao/BDFactory.java</file>
+            <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/actions/Action5ChangerQty.java</file>
+            <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/actions/Action2Detail.java</file>
             <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/web/index.html</file>
             <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/entities/LignePanier.java</file>
             <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/vues/VueDetails.java</file>
             <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/controleurs/ControleurVente.java</file>
-            <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/vues/VuePanier.java</file>
+            <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/actions/Action6SuprPanier.java</file>
+            <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/vues/VueCatalogue.java</file>
             <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/actions/Action4GetPanier.java</file>
+            <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/vues/VuePanier.java</file>
             <file>file:/P:/Users/yanis.batatia/Documents/NetBeansProjects/Td52-Vente-catalogue/src/java/fr/ipst/vente/actions/Action3AjoutPanier.java</file>
         </group>
     </open-files>
