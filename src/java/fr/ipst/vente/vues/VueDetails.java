@@ -54,7 +54,7 @@ out.println("<H1>CATALOGUE</H1>");
                 out.println("<INPUT TYPE ='HIDDEN' NAME='action' value='3'>");
                 out.println("<INPUT TYPE ='HIDDEN' NAME='ref' value='"+article.getReference()+"'>");
                 out.println("<INPUT TYPE ='TEXT' NAME='qty' value='1'><BR>");
-                out.println("<INPUT TYPE ='SUBMIT' NAME='ajouter' value='Ajouter au panier'>");
+                out.println("<INPUT TYPE ='SUBMIT' value='ajouter'>");
                 out.println("</TD> ");
                 
                 out.println("</FORM>");

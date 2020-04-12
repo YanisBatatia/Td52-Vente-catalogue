@@ -11,6 +11,7 @@ import fr.ipst.vente.actions.Action3AjoutPanier;
 import fr.ipst.vente.actions.Action4GetPanier;
 import fr.ipst.vente.actions.Action5ChangerQty;
 import fr.ipst.vente.actions.Action6SuprPanier;
+import fr.ipst.vente.actions.Action7ViderPanier;
 import fr.ipst.vente.entities.Article;
 import fr.ipst.vente.entities.Panier;
 import fr.ipst.vente.vues.VueCatalogue;
@@ -77,7 +78,7 @@ public class ControleurVente extends HttpServlet {
                 break;
                 case "4":{
                     Action4GetPanier action4 = new Action4GetPanier();
-                    Panier panier = action4.getpanier(session);
+                    Panier panier = action4.execute(session);
                     VuePanier vue = new VuePanier();
                     vue.afficher(out, panier);
                 } 
@@ -98,6 +99,13 @@ public class ControleurVente extends HttpServlet {
                     VuePanier vue = new VuePanier();
                     vue.afficher(out, panier);
                 }
+                break;
+                case "7":{ 
+                Action7ViderPanier action7 = new Action7ViderPanier();
+                Panier panier = action7.execute(session); 
+                VuePanier vue = new VuePanier();
+                vue.afficher(out, panier);
+            }
             }
         }
     }

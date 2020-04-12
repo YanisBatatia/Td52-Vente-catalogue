@@ -5,12 +5,21 @@
  */
 package fr.ipst.vente.entities;
 
+import java.util.Objects;
+
 /**
  *
  * @author yanis.batatia
  */
 public class LignePanier {
 
+    public LignePanier(String ref) {
+        this.article = new Article(ref); 
+        this.quantite = 0;
+    }
+
+    
+    
     public LignePanier(Article article, int quantite) {
         this.article = article;
         this.quantite = quantite;
@@ -57,4 +66,30 @@ public class LignePanier {
         this.quantite = quantite;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final LignePanier other = (LignePanier) obj;
+        if (!Objects.equals(this.article, other.article)) {
+            return false;
+        }
+        return true;
+    }
+
+    
+    
 }

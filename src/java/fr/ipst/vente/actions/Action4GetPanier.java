@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
  * @author yanis.batatia
  */
 public class Action4GetPanier {
-    public Panier getpanier(HttpSession session){
+    public Panier execute(HttpSession session){
         Panier panier = (Panier) session.getAttribute("Panier");
         return panier;
     }

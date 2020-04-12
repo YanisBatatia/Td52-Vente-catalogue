@@ -29,15 +29,9 @@ public class Action3AjoutPanier {
         if (panier == null) {
             panier = new Panier();
             session.setAttribute("Panier", panier);
-        } else {
-            for (Iterator<LignePanier> iterator = panier.iterator(); iterator.hasNext();) {
-                LignePanier next = iterator.next();
-                if (next.getArticle().getReference().equals(ref)) {
-                    panier = new Action5ChangerQty().execute(qty, ref, session);
-                    return panier;
-                }
-            }
-        }
+        } 
+            
+        
         Article article = dao.findArticle(ref);
 
         LignePanier newLinePanier = new LignePanier(article, qty);

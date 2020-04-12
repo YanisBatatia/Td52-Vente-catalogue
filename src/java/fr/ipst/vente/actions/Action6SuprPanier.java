@@ -7,7 +7,6 @@ package fr.ipst.vente.actions;
 
 import fr.ipst.vente.entities.LignePanier;
 import fr.ipst.vente.entities.Panier;
-import java.util.Iterator;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -15,18 +14,15 @@ import javax.servlet.http.HttpSession;
  * @author yanis.batatia
  */
 public class Action6SuprPanier {
-    public Panier execute(String ref,HttpSession session){
-        
-        
+
+    public Panier execute(String ref, HttpSession session) {
+
         Panier panier = (Panier) session.getAttribute("Panier");
 
-        
-        for (Iterator<LignePanier> iterator = panier.iterator(); iterator.hasNext();) {
-            LignePanier next = iterator.next();
-            if (next.getArticle().getReference().equals(ref)) {
-                panier.remove(next);
-            } 
-        }
+        LignePanier lignetoremove = new LignePanier(ref);
+
+        panier.remove(lignetoremove);
+
         return panier;
     }
 }
